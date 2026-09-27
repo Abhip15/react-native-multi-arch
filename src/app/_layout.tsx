@@ -1,18 +1,30 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
+import '@theme/unistyles'; // MUST be the first import (registers themes/breakpoints)
+
+import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { useEffect } from 'react';
+import { useUnistyles } from 'react-native-unistyles';
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
+import { AppProviders } from '@/providers/app-providers';
 
-SplashScreen.preventAutoHideAsync();
+void SplashScreen.preventAutoHideAsync();
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
+export default function RootLayout() {
+  const { rt } = useUnistyles();
+  const isDark = rt.themeName === 'dark';
+
+  useEffect(() => {
+    void SplashScreen.hideAsync();
+  }, []);
+
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <AppProviders>
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="index" />
+        <Stack.Screen name="+not-found" options={{ headerShown: true, title: 'Not found' }} />
+      </Stack>
+      <StatusBar style={isDark ? 'light' : 'dark'} />
+    </AppProviders>
   );
 }

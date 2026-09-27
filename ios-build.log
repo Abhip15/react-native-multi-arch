@@ -1,0 +1,44 @@
+
+> genericapp@1.0.0 ios
+> expo run:ios
+
+› Planning build
+
+❌  error: unable to attach DB: error: accessing build database "/Users/abhishek/Library/Developer/Xcode/DerivedData/GenericAppDev-bekvxswojaezdggccmobsujvdfrk/Build/Intermediates.noindex/XCBuildData/build.db": database is locked Possibly there are two concurrent builds running in the same filesystem location.
+
+
+⚠️  Script has ambiguous dependencies causing it to run on every build.
+   To fix, go to: Xcode » GenericAppDev/GenericAppDev » Build Phases » '[Expo Dev Launcher] Strip Local Network Keys for Release'
+   Either: Uncheck "Based on dependency analysis", or select output files to trigger the script
+
+
+› 1 error(s), and 1 warning(s)
+
+Xcode build failed due to concurrent builds, retrying in 1s... (attempt 1/3)
+› Planning build
+
+❌  error: unable to attach DB: error: accessing build database "/Users/abhishek/Library/Developer/Xcode/DerivedData/GenericAppDev-bekvxswojaezdggccmobsujvdfrk/Build/Intermediates.noindex/XCBuildData/build.db": database is locked Possibly there are two concurrent builds running in the same filesystem location.
+
+
+⚠️  Script has ambiguous dependencies causing it to run on every build.
+   To fix, go to: Xcode » GenericAppDev/GenericAppDev » Build Phases » '[Expo Dev Launcher] Strip Local Network Keys for Release'
+   Either: Uncheck "Based on dependency analysis", or select output files to trigger the script
+
+
+› 1 error(s), and 1 warning(s)
+
+Xcode build failed due to concurrent builds, retrying in 2s... (attempt 2/3)
+› Planning build
+
+❌  error: unable to attach DB: error: accessing build database "/Users/abhishek/Library/Developer/Xcode/DerivedData/GenericAppDev-bekvxswojaezdggccmobsujvdfrk/Build/Intermediates.noindex/XCBuildData/build.db": database is locked Possibly there are two concurrent builds running in the same filesystem location.
+
+
+⚠️  Script has ambiguous dependencies causing it to run on every build.
+   To fix, go to: Xcode » GenericAppDev/GenericAppDev » Build Phases » '[Expo Dev Launcher] Strip Local Network Keys for Release'
+   Either: Uncheck "Based on dependency analysis", or select output files to trigger the script
+
+
+› 1 error(s), and 1 warning(s)
+
+Xcode build failed due to concurrent builds, retrying in 4s... (attempt 3/3)
+› Planning build

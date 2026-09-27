@@ -2,19 +2,34 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/assets/*": [
-        "./assets/*"
-      ]
+      "@/*": ["./src/*"],
+      "@app/*": ["./src/app/*"],
+      "@assets/*": ["./assets/*"],
+      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"],
+      "@config": ["./src/config"],
+      "@config/*": ["./src/config/*"],
+      "@constants": ["./src/constants"],
+      "@constants/*": ["./src/constants/*"],
+      "@features/*": ["./src/features/*"],
+      "@hooks": ["./src/hooks"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@providers": ["./src/providers"],
+      "@providers/*": ["./src/providers/*"],
+      "@shared": ["./src/shared"],
+      "@shared/*": ["./src/shared/*"],
+      "@theme": ["./src/theme"],
+      "@theme/*": ["./src/theme/*"],
+      "@types/*": ["./src/types/*"],
+      "@utils": ["./src/utils"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts", "app.config.ts"],
+  "exclude": ["node_modules", "dist", ".expo"]
 }
